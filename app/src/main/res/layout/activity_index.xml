@@ -4,6 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".index">
+    tools:context=".Index">
 
+    <TextView
+        android:id="@+id/calculadora"
+        android:layout_width="169dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="50dp"
+        android:text="Calculadora Simples"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_soma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOMAR"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="299dp"
+        tools:text="@string/somar" />
+
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIVIDIR"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="299dp"
+        tools:text="@string/dividir" />
+
+    <Button
+        android:id="@+id/btn_multiplica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/multiplica"
+        android:text="MULTIPLICAR"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <Button
+        android:id="@+id/btn_subtrai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBTRAIR"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="362dp"
+        tools:text="@string/subtrair" />
+
+    <EditText
+        android:id="@+id/et_valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/digitar1" />
+
+    <TextView
+        android:id="@+id/digitar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Digite o primeiro valor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora"
+        tools:text="@string/valor1" />
+
+    <EditText
+        android:id="@+id/et_valor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <TextView
+        android:id="@+id/digitar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite o segundo valor"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="167dp"
+        tools:text="@string/valor2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
