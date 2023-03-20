@@ -4,14 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8ECFA"
     tools:context=".Index">
 
     <TextView
         android:id="@+id/calculadora"
-        android:layout_width="169dp"
-        android:layout_height="28dp"
+        android:layout_width="184dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
         android:text="Calculadora Simples"
+        android:textColor="#9C27B0"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,46 +25,63 @@
         android:id="@+id/btn_soma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#9C27B0"
         android:text="SOMAR"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="299dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_divide"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado"
         tools:text="@string/somar" />
-
-    <Button
-        android:id="@+id/btn_divide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DIVIDIR"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="299dp"
-        tools:text="@string/dividir" />
 
     <Button
         android:id="@+id/btn_multiplica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/multiplica"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#9C27B0"
         android:text="MULTIPLICAR"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="362dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toEndOf="@+id/btn_subtrai"
+        app:layout_constraintTop_toBottomOf="@+id/btn_divide"
+        tools:text="@string/multiplica" />
+
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="92dp"
+        android:backgroundTint="#9C27B0"
+        android:text="DIVIDIR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado"
+        tools:text="@string/dividir" />
 
     <Button
         android:id="@+id/btn_subtrai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#9C27B0"
         android:text="SUBTRAIR"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="362dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_soma"
         tools:text="@string/subtrair" />
 
     <EditText
         android:id="@+id/et_valor1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="0"
+        android:hint="0"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/digitar1" />
 
@@ -67,9 +89,10 @@
         android:id="@+id/digitar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="Digite o primeiro valor"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculadora"
         tools:text="@string/valor1" />
@@ -78,25 +101,43 @@
         android:id="@+id/et_valor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="0"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="179dp" />
+        android:hint="0"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/digitar2" />
 
     <TextView
         android:id="@+id/tv_resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="253dp" />
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_valor2" />
 
     <TextView
         android:id="@+id/digitar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Digite o segundo valor"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="167dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_valor1"
         tools:text="@string/valor2" />
+
+    <TextView
+        android:id="@+id/nomes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fernanda e Letícia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_multiplica"
+        app:layout_constraintVertical_bias="0.89" />
 </androidx.constraintlayout.widget.ConstraintLayout>
